@@ -2,78 +2,136 @@
 
 ![Balog OS Icon](assets/images/icon.png)
    _               _____ _____ 
-   
-## Přehled projektu
+    ____        __               ____  _____
+   / __ )____ _/ /___  ____ _   / __ \/ ___/
+  / __  / __ `/ / __ \/ __ `/  / / / /\__ \ 
+ / /_/ / /_/ / / /_/ / /_/ /  / /_/ /___/ / 
+/_____/\__,_/_/\____/\__, /   \____//____/  
+                    /____/                  
+## Project Overview
 
-Balog OS je projekt vlastního operačního systému, jehož cílem je vytvořit lehký, jednoduchý a efektivní systém zaměřený na fyzický hardware. Primární filozofií je postupný vývoj od základní funkcionality (klávesnice, shell) až po komplexnější funkce, jako je grafické uživatelské rozhraní (GUI) a podpora ovladačů.
+Balog OS is a custom operating system project aimed at creating a lightweight, simple, and efficient system focused on physical hardware. The primary philosophy is to develop gradually from basic functionality (keyboard, shell) to more complex features, such as a graphical user interface (GUI) and driver support.
 
-## Obsah
+## Table of Contents
 
-- [Architektura](#architektura)
-- [Požadavky na hardware](#požadavky-na-hardware)
-- [Cíle projektu](#cíle-projektu)
-- [Klíčové komponenty](#klíčové-komponenty)
-- [Technické detaily](#technické-detaily)
-- [Budoucí rozšíření](#budoucí-rozšíření)
-- [Struktura skriptů](#struktura-skriptů)
-- [Dokumentace](#dokumentace)
-- [Licence](#licence)
+- [Architecture](#architecture)
+- [Hardware Requirements](#hardware-requirements)
+- [Project Goals](#project-goals)
+- [Key Components](#key-components)
+- [Technical Details](#technical-details)
+- [Future Extensions](#future-extensions)
+- [Script Structure](#script-structure)
+- [Documentation](#documentation)
+- [License](#license)
 
-## Architektura
+## Architecture
 
-### Cílová platforma
+### Target Platform
 
-- **Architektura**: x86_64 (moderní 64bitové procesory AMD a Intel)
-- **Optimalizace**: Primárně pro fyzický hardware, sekundárně pro virtualizační platformy (např. VirtualBox, QEMU).
+- **Architecture**: x86_64 (modern 64-bit processors from AMD and Intel)
+- **Optimization**: Primarily for physical hardware, secondarily for virtualization platforms (e.g., VirtualBox, QEMU).
 
-### Bootovací mechanika
+### Boot Mechanism
 
-- **Bootloader**: GRUB (Grand Unified Bootloader) pro jednoduché zavádění systému.
-- **Paměťová správa**: Základní podpora při zavádění (stránkování, segmentace).
+- **Bootloader**: GRUB (Grand Unified Bootloader) for easy system booting.
+- **Memory Management**: Basic support during boot (paging, segmentation).
 
-## Požadavky na hardware
+## Hardware Requirements
 
-### Minimální požadavky
+### Minimum Requirements
 
-- **CPU**: Dvoujádrový procesor s podporou 64 bitů.
-- **RAM**: 512 MB (pro základní funkce OS).
-- **Disk**: 1–2 GB pro systém s jednoduchým GUI.
+- **CPU**: Dual-core processor with 64-bit support.
+- **RAM**: 512 MB (for basic OS functions).
+- **Disk**: 1–2 GB for the system with a simple GUI.
 
-### Doporučené požadavky
+### Recommended Requirements
 
-- **CPU**: Čtyřjádrový nebo lepší procesor.
+- **CPU**: Quad-core or better processor.
 - **RAM**: 2–4 GB.
-- **Disk**: 10 GB (včetně prostoru pro aplikace a data).
+- **Disk**: 10 GB (including space for applications and data).
 
-## Cíle projektu
+## Project Goals
 
-### Fáze 1: Základní funkčnost
+### Phase 1: Basic Functionality
 
-- Funkce klávesnice: Detekce vstupu uživatele a přenos dat do systému.
-- Nastavení údajů uživatele: Možnost zadat jméno, heslo a vytvořit uživatelský účet.
-- Shell: Jednoduché textové rozhraní pro spouštění příkazů.
+- Keyboard Functionality: Detecting user input and transferring data to the system.
+- User Data Setup: Ability to enter a name, password, and create a user account.
+- Shell: A simple text interface for executing commands.
 
-### Fáze 2: Rozšíření funkcí
+### Phase 2: Feature Expansion
 
-- Souborový systém: Implementace jednoduchého souborového systému (např. FAT32 nebo vlastní).
-- Správa uživatelů: Přihlašování a správa uživatelských účtů.
-- Základní GUI: Jednoduché grafické rozhraní s pozadím a ikonami podobné XFCE nebo KDE Plasma.
+- File System: Implementation of a simple file system (e.g., FAT32 or custom).
+- User Management: Login and management of user accounts.
+- Basic GUI: A simple graphical interface with backgrounds and icons similar to XFCE or KDE Plasma.
 
-### Fáze 3: Pokročilé funkce
+### Phase 3: Advanced Features
 
-- Multitasking: Správa procesů a vláken.
-- Ovladače: Podpora hardwaru, jako jsou grafické karty (VESA framebuffer, OpenGL).
-- Kompatibilita: Experimentální podpora spouštění .exe souborů (např. pomocí Wine).
+- Multitasking: Process and thread management.
+- Drivers: Hardware support, such as graphics cards (VESA framebuffer, OpenGL).
+- Compatibility: Experimental support for running .exe files (e.g., using Wine).
 
-## Klíčové komponenty
+## Key Components
 
-### Kernel (jádro)
+### Kernel
 
-- **Typ**: Monolitické jádro.
-- **Funkce**: Správa paměti, procesů, souborových operací a vstupních/výstupních zařízení.
+- **Type**: Monolithic kernel.
+- **Function**: Memory management, process management, file operations, and input/output device management.
 
 ### Shell
 
-- **Vlastnosti**:
-  - Interpret příkazů.
- 
+- **Features**:
+  - Command interpreter.
+  - Ability to navigate the file system.
+  - Basic commands (e.g., ls, cd, mkdir).
+
+### File System
+
+- **Goal**: Incorporate a simple file system (e.g., FAT32) for basic data operations.
+
+### Graphical User Interface (GUI)
+
+- **Base**: Framebuffer (for simple pixel rendering on the screen).
+- **Long-term Goal**: Support for OpenGL or other graphical APIs.
+
+## Technical Details
+
+### Memory Management
+
+- Support for paging and virtual memory.
+- Separation of kernel space and user space.
+
+### Interrupts
+
+- Setting up the IDT (Interrupt Descriptor Table).
+- Support for both hardware and software interrupts.
+
+### Hardware Support
+
+- **Input Devices**: Support for PS/2 and USB keyboards and mice.
+- **Graphics**: Basic VESA support for framebuffer.
+- **Disks**: AHCI support (for SATA disks).
+
+## Future Extensions
+
+- **Network Support**: Implementation of a TCP/IP stack for communication.
+- **Advanced GUI**: Ability to run applications in a custom graphical environment.
+- **Virtualization**: Optimization for running on virtualization platforms.
+
+## Script Structure
+BalogOS/ ├── boot/ │ ├── grub/ │ │ └── grub.cfg # Configuration file for GRUB │ ├── bootloader.bin # Custom bootloader │ ├── initrd.img # Initial RAM disk │ ├── kernel.img # Kernel image │ └── modules/ # Kernel modules ├── src/ │ ├── kernel/ │ │ ├── memory.c # Memory management │ │ ├── process.c # Process management │ │ └── file.c # File operations │ ├── shell/ │ │ ├── shell.c # Shell implementation │ │ └── commands.c # Command handling │ └── gui/ │ ├── gui.c # GUI implementation │ └── graphics.c # Graphics rendering ├── assets/ │ ├── images/ │ │ └── icon.png # Project icon │ └── fonts/ │ └── default.ttf # Default font └── README.md # Project documentation
+
+
+Verify
+
+Open In Editor
+Run
+Copy code
+
+## Documentation
+
+For detailed documentation on how to build and run Balog OS, please refer to the [Documentation](#documentation) section.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details. ```markdown
+# Balog OS
