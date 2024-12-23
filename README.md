@@ -108,5 +108,3 @@ Balog OS je projekt vlastního operačního systému, jehož cílem je vytvořit
 - **Podpora sítě**: Implementace TCP/IP stacku pro komunikaci.
 - **Pokročilé GUI**: Možnost spouštění aplikací ve vlastním grafickém prostředí.
 - **Virtualizace**: Optimalizace pro běh na virtualizačních platformách.
-
-## Struktura skriptů
