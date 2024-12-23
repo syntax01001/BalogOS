@@ -1,4 +1,8 @@
+# Balog OS
 
+![Balog OS Icon](assets/images/icon.png)
+   _               _____ _____ 
+   
 ## Přehled projektu
 
 Balog OS je projekt vlastního operačního systému, jehož cílem je vytvořit lehký, jednoduchý a efektivní systém zaměřený na fyzický hardware. Primární filozofií je postupný vývoj od základní funkcionality (klávesnice, shell) až po komplexnější funkce, jako je grafické uživatelské rozhraní (GUI) a podpora ovladačů.
@@ -72,39 +76,4 @@ Balog OS je projekt vlastního operačního systému, jehož cílem je vytvořit
 
 - **Vlastnosti**:
   - Interpret příkazů.
-  - Možnost navigace v souborovém systému.
-  - Základní příkazy (např. ls, cd, mkdir).
-
-### Sou ```markdown
-## Souborový systém
-
-- **Cíl**: Začlenit jednoduchý souborový systém (např. FAT32) pro základní operace s daty.
-
-### Grafické uživatelské rozhraní (GUI)
-
-- **Základ**: Framebuffer (pro jednoduché vykreslování pixelů na obrazovku).
-- **Dlouhodobý cíl**: Podpora OpenGL nebo jiných grafických API.
-
-## Technické detaily
-
-### Správa paměti
-
-- Podpora stránkování a virtuální paměti.
-- Oddělení kernel space a user space.
-
-### Přerušení
-
-- Nastavení tabulky IDT (Interrupt Descriptor Table).
-- Podpora pro hardwarová i softwarová přerušení.
-
-### Hardwarová podpora
-
-- **Vstupní zařízení**: Podpora PS/2 a USB klávesnic a myší.
-- **Grafika**: Základní podpora VESA pro framebuffer.
-- **Disky**: Podpora AHCI (pro SATA disky).
-
-## Budoucí rozšíření
-
-- **Podpora sítě**: Implementace TCP/IP stacku pro komunikaci.
-- **Pokročilé GUI**: Možnost spouštění aplikací ve vlastním grafickém prostředí.
-- **Virtualizace**: Optimalizace pro běh na virtualizačních platformách.
+ 
