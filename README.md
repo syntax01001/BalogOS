@@ -15,7 +15,6 @@ Balog OS is a custom operating system project aimed at creating a lightweight, s
 - [Key Components](#key-components)
 - [Technical Details](#technical-details)
 - [Future Extensions](#future-extensions)
-- [Script Structure](#script-structure)
 - [Documentation](#documentation)
 - [License](#license)
 
