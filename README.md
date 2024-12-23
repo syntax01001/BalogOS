@@ -1,13 +1,8 @@
 # Balog OS
 
 ![Balog OS Icon](assets/images/icon.png)
-   _               _____ _____ 
-    ____        __               ____  _____
-   / __ )____ _/ /___  ____ _   / __ \/ ___/
-  / __  / __ `/ / __ \/ __ `/  / / / /\__ \ 
- / /_/ / /_/ / / /_/ / /_/ /  / /_/ /___/ / 
-/_____/\__,_/_/\____/\__, /   \____//____/  
-                    /____/                  
+
+                 
 ## Project Overview
 
 Balog OS is a custom operating system project aimed at creating a lightweight, simple, and efficient system focused on physical hardware. The primary philosophy is to develop gradually from basic functionality (keyboard, shell) to more complex features, such as a graphical user interface (GUI) and driver support.
