@@ -112,12 +112,6 @@ Balog OS is a custom operating system project aimed at creating a lightweight, s
 - **Advanced GUI**: Ability to run applications in a custom graphical environment.
 - **Virtualization**: Optimization for running on virtualization platforms.
 
-## Script Structure
-BalogOS/ ├── boot/ │ ├── grub/ │ │ └── grub.cfg # Configuration file for GRUB │ ├── bootloader.bin # Custom bootloader │ ├── initrd.img # Initial RAM disk │ ├── kernel.img # Kernel image │ └── modules/ # Kernel modules ├── src/ │ ├── kernel/ │ │ ├── memory.c # Memory management │ │ ├── process.c # Process management │ │ └── file.c # File operations │ ├── shell/ │ │ ├── shell.c # Shell implementation │ │ └── commands.c # Command handling │ └── gui/ │ ├── gui.c # GUI implementation │ └── graphics.c # Graphics rendering ├── assets/ │ ├── images/ │ │ └── icon.png # Project icon │ └── fonts/ │ └── default.ttf # Default font └── README.md # Project documentation
-
-
-Verify
-
 Open In Editor
 Run
 Copy code
